@@ -1,0 +1,28 @@
+.scheduleCard {
+    background-color: #ffffff;
+    border-radius: 10px;
+    
+    padding: 20px;
+    width: 45%;
+    height: 300px;
+  }
+  
+  .eventCard {
+    background-color: #f7f7f7;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding: 10px;
+  }
+  
+  .eventCard h3 {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    margin: 0;
+  }
+  
+  .eventCard p {
+    margin: 5px 0;
+  }
+  
