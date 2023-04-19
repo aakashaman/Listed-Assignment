@@ -1,21 +1,16 @@
 import { useState } from 'react';
 import Homepage from './pages/Homepage';
-import LoginPage from './pages/Login';
+import Signin from './pages/Signin';
+
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-  const handleLogin = () => {
-    setIsLoggedIn(true);
-  };
 
   return (
     <div>
-      <div>
-       
-          <Homepage />
-        
-      </div>
+    
+     <Signin/>
+    
     </div>
   );
 }

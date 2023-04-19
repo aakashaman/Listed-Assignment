@@ -3,6 +3,11 @@ import { faSearch, faBell } from '@fortawesome/free-solid-svg-icons'
 import s from "./navbar.module.css"
 
 export default function Navbar() {
+    const logout = () => {
+        localStorage.clear();
+        window.location.reload();
+    }
+    
     return (
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center",marginTop:"15px" }}>
         <h1>Dashboard</h1>
@@ -19,7 +24,9 @@ export default function Navbar() {
                 alt="profile"
                 className={s.profileimage}
               />
+             
             </div>
+            <button onClick={logout}>Logout</button>
           </div>
         </div>
       </div>
