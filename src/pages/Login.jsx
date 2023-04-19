@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import GoogleLogin from 'react-google-login';
-
 import Homepage from './Homepage';
 
-const LoginPage = () => {
+const LoginPage = ({ onLogin }) => {
   const [user, setUser] = useState(null);
   const [error, setError] = useState(null);
 
   const handleSuccess = (response) => {
     setUser(response.profileObj);
+    onLogin();
   };
 
   const handleFailure = (response) => {
