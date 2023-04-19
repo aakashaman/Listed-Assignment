@@ -4,10 +4,10 @@ import s from "./navbar.module.css"
 
 export default function Navbar() {
     const logout = () => {
-        localStorage.clear();
-        window.location.reload();
-    }
-    
+    localStorage.clear();
+    window.location.reload();
+}
+
     return (
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center",marginTop:"15px" }}>
         <h1>Dashboard</h1>
