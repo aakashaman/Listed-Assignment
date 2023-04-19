@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import GoogleLogin from 'react-google-login';
 
+import Homepage from './Homepage';
+
 const LoginPage = () => {
   const [user, setUser] = useState(null);
   const [error, setError] = useState(null);
@@ -16,10 +18,7 @@ const LoginPage = () => {
   return (
     <div>
       {user ? (
-        <div>
-          <p>Welcome, {user.name}</p>
-          <img src={user.imageUrl} alt={user.name} />
-        </div>
+        <Homepage user={user} />
       ) : (
         <GoogleLogin
           clientId="1028745300785-qfscbil18g2oenf2j808d4qgac542qgq.apps.googleusercontent.com"
