@@ -22,6 +22,7 @@ export default function Homepage() {
       <div style={{display:"flex",justifyContent:"space-between"}}>
       <Piechart/>
       <ScheduleCard/>
+      <LoginPage/>
       </div>
       
       </div>
