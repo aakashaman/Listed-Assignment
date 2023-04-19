@@ -30,7 +30,7 @@ const Linechart = () => {
     : data;
 
   return (
-    <div style={{ position: 'relative', padding: '16px',  borderRadius: '20px', }}>
+    <div style={{ position: 'relative', padding: '16px',  borderRadius: '20px',backgroundColor:"white"}}>
       <h3>Activities</h3>
       <div style={{ display: 'flex', alignItems: 'center', marginBottom: '16px' }}>
       
@@ -53,7 +53,7 @@ const Linechart = () => {
         </div>
       </div>
       <LineChart width={1400} height={300} data={filteredData}>
-        <CartesianGrid stroke="none" strokeWidth={0} />
+        <CartesianGrid strokeDasharray="none" strokeWidth={0.5}  />
         <XAxis dataKey="name" />
         <YAxis />
         <Tooltip />

@@ -7,14 +7,14 @@
   }
   
   .searchinput {
-    flex: 1;
+    
     border: none;
     font-size: 14px;
-    padding: 5px;
-    margin-right: 10px;
-    border-radius: 5px;
+    padding: 2px;
+    border-radius: 10px;
     outline: none;
-    padding-right: 30px;
+    width: 180px;
+    height: 30px;
   }
   
   .searchicon {
@@ -22,16 +22,17 @@
     color: #333;
     position: absolute;
     top: 50%;
-    right: 10px;
+    right: 15px;
     transform: translateY(-50%);
+    
   }
-
-  .bellicon{
+  
+  .bellicon {
     font-size: 20px;
     color: #333;
     margin-left: 20px;
   }
-
+  
   .profilepicture {
     width: 30px;
     height: 30px;
@@ -46,23 +47,25 @@
     object-fit: cover;
   }
   
-  .searchcard {
-    display: flex;
-    align-items: center;
-  }
-  
   .searchbox {
     display: flex;
     align-items: center;
     position: relative;
-    margin-right: 10px;
   }
-  
- 
   
   .notification {
     display: flex;
     align-items: center;
   }
-  
-  
+  .logoutb{
+
+    background-color: rgb(59, 231, 151);
+    color: black;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 30px;
+    
+  }

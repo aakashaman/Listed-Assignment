@@ -1,6 +1,17 @@
 import s from './sidebar.module.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChartBar, faMoneyBillAlt, faCalendarAlt, faUsers, faCog } from '@fortawesome/free-solid-svg-icons';
+import dashboard from './resources/dashboard.svg';
+import transaction from './resources/transaction.svg';
+import schedule from './resources/schedule.svg';
+import user from './resources/user.svg';
+import setting from './resources/setting.svg';
+
+const items = [
+  { img: dashboard, text: "Dashboard" },
+  { img: transaction, text: "Transactions" },
+  { img: schedule, text: "Schedules" },
+  { img: user, text: "Users" },
+  { img: setting, text: "Settings" },
+];
 
 export default function Sidebar() {
   return (
@@ -8,34 +19,18 @@ export default function Sidebar() {
       <div className={s.card}>
         <h1 className={s.board_text}>Board.</h1>
         <ul className={s.content}>
-          <li style={{display:"flex"}}>
-            <FontAwesomeIcon icon={faChartBar} />
-            <div style={{marginLeft:"10px"}}>Dashboard</div>
-          </li>
-          <li style={{display:"flex"}}>
-            <FontAwesomeIcon icon={faMoneyBillAlt} />
-            <div style={{marginLeft:"10px"}}>Transactions</div>
-          </li>
-          <li style={{display:"flex"}}>
-            <FontAwesomeIcon icon={faCalendarAlt} />
-            <div style={{marginLeft:"10px"}}>Schedules</div>
-          </li>
-          <li style={{display:"flex"}}>
-            <FontAwesomeIcon icon={faUsers} />
-            <div style={{marginLeft:"10px"}}>Users</div>
-          </li>
-          <li style={{display:"flex"}}>
-            <FontAwesomeIcon icon={faCog} />
-            <div style={{marginLeft:"10px"}}>Settings</div>
-          </li>
-          <li style={{display:"flex",marginTop:"33vh",flexDirection:"column",gap:"20px" }}>
-            <div style={{marginLeft:"10px"}}>Help</div>
-            <div style={{marginLeft:"10px"}}>Contact Us</div>
+          {items.map((item, index) => (
+            <li style={{ display: "flex" }} key={index}>
+              <img src={item.img} alt={`Icon ${index}`} />
+              <div style={{ marginLeft: "10px" }}>{item.text}</div>
+            </li>
+          ))}
+          <li style={{ display: "flex", marginTop: "33vh", flexDirection: "column", gap: "20px" }}>
+            <div style={{ marginLeft: "10px" }}>Help</div>
+            <div style={{ marginLeft: "10px" }}>Contact Us</div>
           </li>
         </ul>
-    
-       
       </div>
     </div>
-  )
+  );
 }

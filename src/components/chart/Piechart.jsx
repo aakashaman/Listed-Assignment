@@ -34,7 +34,7 @@ const Piechart = () => {
   };
 
   return (
-    <div style={{ position: 'relative', padding: '16px',  borderRadius: '20px', width: '46%',height:"300px" }}>
+    <div style={{ position: 'relative', padding: '20px',  borderRadius: '20px', width: '46%',height:"300px",backgroundColor:"white" }}>
        
       <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '8px' }}>
       <h3>Pie Chart</h3>

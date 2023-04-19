@@ -2,13 +2,14 @@
     background-color: #ffffff;
     border-radius: 10px;
     
-    padding: 20px;
-    width: 45%;
-    height: 300px;
+    padding: 30px;
+    width: 44%;
+    height: 280px;
   }
   
   .eventCard {
-   
+    border-left-width: 4px;
+    border-left-style: solid;
     border-radius: 5px;
     margin-top: 10px;
     padding: 10px;
@@ -24,5 +25,6 @@
   
   .eventCard p {
     margin: 5px 0;
+    font-size: 12px;
   }
   
