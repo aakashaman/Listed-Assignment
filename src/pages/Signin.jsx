@@ -91,7 +91,7 @@ function Signin(){
 
 {showSignupModal && (
      <div style={{ position: "fixed", top: 0, left: 0, width: "100vw", height: "100vh", backgroundColor: "rgba(0,0,0,0.5)", display: "flex", justifyContent: "center",alignItems: "center" }}>
-        <div style={{ backgroundColor: "#fff", width: "20.5vw", height: "40vh", padding: "3vw", borderRadius: "10px" }}>
+        <div style={{ backgroundColor: "#fff", width: "20.5vw", height: "40vh", padding: "2vw", borderRadius: "10px" }}>
           <span className={s.close} onClick={closeSignupModal}>
             &times;
           </span>
