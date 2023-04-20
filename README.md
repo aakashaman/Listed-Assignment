@@ -1,3 +1,7 @@
+# Deployment Link
+
+https://listed-assignment-iota.vercel.app/
+
 # Listed Assignment
 
 This is a project dashboard built using React JS, Firebase, Node JS, and Express JS. The dashboard provides an overview of revenue, transactions, likes, and users. Data is fetched from an API built using Node JS and Express JS. Both the frontend and backend of the project are hosted on Vercel.
