@@ -4,14 +4,14 @@ import Linechart from "../components/chart/Linechart";
 import Piechart from "../components/chart/Piechart";
 import ScheduleCard from "../components/schedulecard/Schedule";
 import Sidebar from "../components/sidebar/Sidebar";
-import './homepage.css'
+import s from './homepage.module.css'
 
 export default function Homepage() {
   return (
     <div style={{zoom:"80%"}}>
     <div style={{ display: "flex" }}>
       <Sidebar />
-      <div style={{display:"flex", flexDirection:'column', marginLeft:'400px'}}>
+      <div className={s.hompage} style={{display:"flex", flexDirection:'column', marginLeft:'20%',}}>
 
      <Navbar/>
       

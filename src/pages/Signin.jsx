@@ -8,7 +8,6 @@ import appleImage from './apple.svg';
 
 function Signin(){
     const [value,setValue] = useState('')
-    const [showSignup, setShowSignup] = useState(false);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [showSignupModal, setShowSignupModal] = useState(false);

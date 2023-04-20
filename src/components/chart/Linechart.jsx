@@ -31,8 +31,8 @@ const Linechart = () => {
 
   return (
     <div style={{ position: 'relative', padding: '16px',  borderRadius: '20px',backgroundColor:"white"}}>
-      <h3>Activities</h3>
-      <div style={{ display: 'flex', alignItems: 'center', marginBottom: '16px' }}>
+      <h3 >Activities</h3>
+      <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px' }}>
       
         <select style={{border:"none",color:"#858585",fontSize:"14px"}} value={range} onChange={(e) => handleSelectChange(e.target.value)}>
           {monthRanges.map((range) => (
@@ -42,7 +42,7 @@ const Linechart = () => {
           ))}
         </select>
       </div>
-      <div style={{ position: 'absolute', top: '10px', right: '10px', display: 'flex', justifyContent: 'flex-end' }}>
+      <div style={{ position: 'absolute', top: '10px', right: '10px', display: 'flex', justifyContent: 'flex-end',marginTop:'10px' }}>
         <div style={{ display: 'flex', alignItems: 'center', marginRight: '40px' }}>
           <div style={{ width: '10px', height: '10px', backgroundColor: '#E9A0A0', borderRadius: '50%', marginRight: '5px' }} />
           <div>Guest</div>

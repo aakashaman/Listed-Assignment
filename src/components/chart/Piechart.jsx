@@ -22,7 +22,11 @@ const COLORS = ['#0088FE', '#00C49F', '#FFBB28'];
   
 
 const Piechart = () => {
-
+  const legendItems = [
+    { value: 'Legend 1', label: 'First legend item' },
+    { value: 'Legend 2', label: 'Second legend item' },
+    { value: 'Legend 3', label: 'Third legend item' },
+  ];
 
   const [selectedRange, setSelectedRange] = useState(monthRanges[0]);
   
