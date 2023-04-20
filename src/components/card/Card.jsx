@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import s from './card.module.css';
 import rev from './resources/tr.svg';
 import trans from './resources/tt.svg';
@@ -5,12 +6,37 @@ import like from './resources/tl.svg';
 import user from './resources/tu.svg';
 
 export default function InfoCard() {
+  const [revenues, setRevenues] = useState('');
+  const [transactions, setTransactions] = useState('');
+  const [likes, setLikes] = useState('');
+  const [users, setUsers] = useState('');
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('https://listed-server-6mcm.vercel.app/');
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        setRevenues(data.revenues);
+        setTransactions(data.transactions);
+        setLikes(data.likes);
+        setUsers(data.users);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
   return (
     <div className={s.card}>
-      <Card title="Total revenues" number="$2,129,430" icon={rev} className={s.totalRevenues} />
-      <Card title="Total Transaction" number="1520" icon={trans} className={s.totalTransactions} />
-      <Card title="Total Likes" number="9721" icon={like} className={s.totalLikes} />
-      <Card title="Total Users" number="892" icon={user} className={s.totalUsers} />
+      <Card title="Total revenues" number={revenues} icon={rev} className={s.totalRevenues} />
+      <Card title="Total Transaction" number={transactions} icon={trans} className={s.totalTransactions} />
+      <Card title="Total Likes" number={likes} icon={like} className={s.totalLikes} />
+      <Card title="Total Users" number={users} icon={user} className={s.totalUsers} />
     </div>
   );
 }
